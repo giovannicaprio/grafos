@@ -144,7 +144,7 @@ public class Grafo {
 	@Override
 	public String toString() {
 		String s = "";
-		s += "    ";
+		s += "   ";
 		for (int i = 1; i < m.length; i++) {
 			s += i + " ";
 		}
