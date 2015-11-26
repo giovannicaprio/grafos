@@ -307,12 +307,66 @@ public class Grafo {
 		return vazao;
 	}
 
-	public void fordFulkerson() {
-		// TODO:
-	}	
 	public void ciclos() {
 		// TODO:
+
+ArrayList cor = new ArrayList();
+
+//para cada vertice u de G faça
+	for(int i=0; i<= m.length; i++)
+		{
+		// cor[u] = BRANCO 
+		cor.add(i,"branco");	
+		}
+	
+	
+	
+	for(int i=1; i<= cor.size(); i++)
+	{
+		// se cor[u] == BRANCO então			 
+		if(cor.get(i) == "branco") 
+		   // DFS_VISIT(u) 
+			DFS_VISIT(i, cor); 
+	
 	}
+		
+}
+	
+	public void DFS_VISIT(int u, ArrayList cor)
+	{
+	//cor[u] = CINZA
+	cor.add(u, "cinza");
+	
+	//para cada vertice v adjacente
+	//de u faça
+//	 se cor[v] == BRANCO faça
+//	 DFS_VISIT(v)
+//	cor[u] = PRETO
+	
+	
+	for (int adj : adjacentes(u))
+	{
+		
+		System.out.println(u + " u");
+		System.out.println(adj);
+
+		if(cor.get(adj) == "branco") 
+			DFS_VISIT(adj, cor);
+		
+	}
+	
+	cor.add(u, "preto");
+		
+	
+	
+	}		
+
+		
+	
+	
+	
+	
+	
 	public void componentes() {
 		// TODO:
 	}	

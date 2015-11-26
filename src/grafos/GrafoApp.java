@@ -31,6 +31,8 @@ public class GrafoApp {
 		System.out.println(g1);
 		System.out.println(g1.largura(1));
 		System.out.println(g1.profundidade(1));
+		System.out.println(g1.fordFulkerson(0,3));
+		g1.fordFulkerson(0,5);
 
 	}
 }
